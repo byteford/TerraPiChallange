@@ -10,5 +10,5 @@ provider "pi" {
   
 }
 resource "pi_basic" "basic" {
-  digits = 3
+  digits = 300000
 }

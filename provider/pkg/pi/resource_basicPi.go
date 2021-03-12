@@ -38,9 +38,8 @@ func resourceBasicPiCreate(ctx context.Context, d *schema.ResourceData, m interf
 }
 func resourceBasicPiRead(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
 	var diags diag.Diagnostics
-	//var pi float64
-	//pi = math.Pi
-	digits := big.NewInt(500 + 10)
+	dig := int64(d.Get("digits").(int))
+	digits := big.NewInt(dig)
 	unity := big.NewInt(0)
 	unity.Exp(big.NewInt(10), digits, nil)
 	pi := big.NewInt(0)
