@@ -7,7 +7,7 @@ terraform {
   }
 }
 provider "pi" {
-  
+
 }
 resource "pi_basic" "basic" {
   digits = 300000
